@@ -1,0 +1,150 @@
+div{
+ margin-bottom: 30px;
+}
+
+#div1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: linear width 2s;
+}
+
+#div2{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    transition: ease height 2s;
+}
+
+#div3{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: ease-in width 2s, height 3s;
+}
+
+#div4{
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    transition: ease-out width 2s;
+}
+
+#div5{
+    width: 100px;
+    height: 100px;
+    background-color: indigo;
+    transition: ease-in-out width 2s, height 4s;
+}
+
+#div5{
+    width: 100px;
+    height: 100px;
+    background-color: indigo;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) width 2s, height 4s;
+}
+
+#div6{
+    width: 300px;
+    height: 200px;
+    background: green;
+    transform: rotateY(150deg);
+}
+
+#div7{
+    width: 300px;
+    height: 200px;
+    background: green;
+    transform: rotateX(350deg);
+}
+
+#div8{
+    width: 300px;
+    height: 200px;
+    background: green;
+    transform: matrix3d(30,40,50);
+}
+
+
+.element {
+  background-color: #0074d9;
+  height: 200px;
+  width: 200px;
+  /* transform: scale(2, .5); */
+  /* transform: skewX(10deg);  */
+  transform: rotateX(30);
+  font-size: 14px;
+  padding: 1px;
+  color: white;
+  line-height: 5px;
+}
+
+#div1:hover{
+    width: 300px;
+}
+
+#div2:hover{
+    height: 400px;
+}
+
+#div3:hover{
+    width: 300px;
+    height: 600px;
+}
+
+#div4:hover{
+    width: 300px;
+}
+
+#div5:hover{
+    width: 200px;
+    height: 300px;
+}
+
+/* style to animate div elements */
+
+section{
+    display: inline-block;
+    background-color: #0074d9;
+    height: 100px;
+    width: 100px;
+    margin: 30px;
+    transform: perspective(200px);
+    animation: animate 2s infinite;
+}
+.label{
+  width: 100px;
+  height: 300px;
+  background-color: black;
+  transition: ease width .3s;
+  transform: rotateX(40deg);
+  animation: damola 3s infinite;
+}
+
+.label2{
+    width: 100px;
+    height: 300px;
+    background-color: red;
+    transform: rotateY(10deg);
+    animation: damola 3s infinite;
+  }
+
+@keyframes animate{
+    0%{
+        transform: perspective(10px);
+    }
+    100%{
+        transform: perspective(200px);
+    }
+}
+@keyframes damola{
+    0%{
+        transform: rotateX(0);
+    }
+    20%{
+        transform: rotateX(60deg);
+    }
+    100%{
+        transform: rotate(200deg,400deg,600deg);
+    }
+}
